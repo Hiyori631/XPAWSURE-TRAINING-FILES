@@ -11,13 +11,17 @@ env/
 
 # Model checkpoints — too large for GitHub (single files up to 219 MB)
 # Back these up separately (OneDrive / Google Drive / external disk)
-models/
-compare/ckpt/
 *.keras
 *.h5
 *.onnx
 *.tflite
 *.pb
+compare/ckpt/
+models/*
+# Exception: production model + class names (35 MB) ship with the repo so
+# verify_5class_s42.py / predict.py work after a fresh clone
+!models/fine_tuned_best_effnet_clean_5class_s42.keras
+!models/class_names_clean_5class_s42.json
 
 # TensorFlow / Keras temp
 *.ckpt

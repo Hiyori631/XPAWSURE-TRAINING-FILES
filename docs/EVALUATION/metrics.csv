@@ -1,0 +1,9 @@
+class,precision,recall,f1,support
+Allergic Dermatitis,0.8571,0.9231,0.8889,13
+Bacterial,0.9231,0.8889,0.9057,27
+Fungal,0.9667,0.9667,0.9667,30
+Hotspot,0.9524,0.9524,0.9524,21
+Mange,0.9423,0.9423,0.9423,52
+accuracy,,,0.9371,143
+macro avg,0.9283,0.9347,0.9312,143
+weighted avg,0.9375,0.9371,0.9371,143
