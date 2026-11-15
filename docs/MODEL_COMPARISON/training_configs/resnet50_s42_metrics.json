@@ -1,0 +1,100 @@
+{
+  "backbone": "resnet50",
+  "label": "ResNet50",
+  "seed": 42,
+  "stage": "finetune",
+  "dataset": "ProcessedDataset224_Clean_5class",
+  "class_names": [
+    "Allergic Dermatitis",
+    "Bacterial",
+    "Fungal",
+    "Hotspot",
+    "Mange"
+  ],
+  "test_accuracy": 0.8951,
+  "macro_precision": 0.8606,
+  "macro_recall": 0.8945,
+  "macro_f1": 0.8713,
+  "weighted_precision": 0.9066,
+  "weighted_recall": 0.8951,
+  "weighted_f1": 0.8969,
+  "per_class": {
+    "Allergic Dermatitis": {
+      "precision": 0.6667,
+      "recall": 0.9231,
+      "f1": 0.7742,
+      "support": 13
+    },
+    "Bacterial": {
+      "precision": 0.8696,
+      "recall": 0.7407,
+      "f1": 0.8,
+      "support": 27
+    },
+    "Fungal": {
+      "precision": 0.9333,
+      "recall": 0.9333,
+      "f1": 0.9333,
+      "support": 30
+    },
+    "Hotspot": {
+      "precision": 0.8333,
+      "recall": 0.9524,
+      "f1": 0.8889,
+      "support": 21
+    },
+    "Mange": {
+      "precision": 1.0,
+      "recall": 0.9231,
+      "f1": 0.96,
+      "support": 52
+    }
+  },
+  "confusion_matrix": [
+    [
+      12,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      5,
+      20,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      1,
+      28,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      20,
+      0
+    ],
+    [
+      0,
+      2,
+      2,
+      0,
+      48
+    ]
+  ],
+  "params_total": 24155525,
+  "model_size_bytes": 230391232,
+  "duration_s_frozen": 2150.7,
+  "duration_s_finetune": 7192.7,
+  "inference_ms_mean": 77.07,
+  "inference_ms_std": 2.47,
+  "unfreeze_policy": "last 44 of 175 (~25%), BN frozen",
+  "checkpoint": "compare\\ckpt\\resnet50_s42_best.keras",
+  "inference_ms_p50": 76.35,
+  "inference_protocol": "CPU, batch=1, 50 images, 5 warmup runs excluded"
+}

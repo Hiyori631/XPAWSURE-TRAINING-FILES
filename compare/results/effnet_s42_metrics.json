@@ -1,0 +1,98 @@
+{
+  "backbone": "effnet",
+  "label": "EfficientNetB0",
+  "seed": 42,
+  "stage": "finetune",
+  "dataset": "ProcessedDataset224_Clean_5class",
+  "class_names": [
+    "Allergic Dermatitis",
+    "Bacterial",
+    "Fungal",
+    "Hotspot",
+    "Mange"
+  ],
+  "test_accuracy": 0.9371,
+  "macro_precision": 0.9283,
+  "macro_recall": 0.9347,
+  "macro_f1": 0.9312,
+  "weighted_precision": 0.9375,
+  "weighted_recall": 0.9371,
+  "weighted_f1": 0.9371,
+  "per_class": {
+    "Allergic Dermatitis": {
+      "precision": 0.8571,
+      "recall": 0.9231,
+      "f1": 0.8889,
+      "support": 13
+    },
+    "Bacterial": {
+      "precision": 0.9231,
+      "recall": 0.8889,
+      "f1": 0.9057,
+      "support": 27
+    },
+    "Fungal": {
+      "precision": 0.9667,
+      "recall": 0.9667,
+      "f1": 0.9667,
+      "support": 30
+    },
+    "Hotspot": {
+      "precision": 0.9524,
+      "recall": 0.9524,
+      "f1": 0.9524,
+      "support": 21
+    },
+    "Mange": {
+      "precision": 0.9423,
+      "recall": 0.9423,
+      "f1": 0.9423,
+      "support": 52
+    }
+  },
+  "confusion_matrix": [
+    [
+      12,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      24,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      29,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      20,
+      0
+    ],
+    [
+      0,
+      2,
+      1,
+      0,
+      49
+    ]
+  ],
+  "params_total": 4417704,
+  "model_size_bytes": 36884187,
+  "inference_ms_mean": 60.45,
+  "inference_ms_std": 3.3,
+  "checkpoint": "models\\fine_tuned_best_effnet_clean_5class_s42.keras",
+  "note": "evaluated with unified evaluator (existing production checkpoint, not retrained)",
+  "inference_ms_p50": 59.91,
+  "inference_protocol": "CPU, batch=1, 50 images, 5 warmup runs excluded"
+}

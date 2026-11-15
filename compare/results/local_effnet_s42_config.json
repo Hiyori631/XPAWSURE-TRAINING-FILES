@@ -1,0 +1,32 @@
+{
+  "backbone": "effnet",
+  "label": "EfficientNetB0",
+  "seed": 42,
+  "dataset": "AblationDatasets/Local",
+  "image_size": 224,
+  "batch_size": 16,
+  "class_names": [
+    "Bacterial",
+    "Fungal",
+    "Hotspot",
+    "Mange"
+  ],
+  "class_weights": {
+    "0": 2.0,
+    "1": 2.5,
+    "2": 1.0,
+    "3": 1.3
+  },
+  "loss": "focal_loss gamma=2.0 with class alpha",
+  "augmentation": "production recipe (frozen: rot0.15/zoom0.1/contrast0.15/brightness0.1/translate0.05; finetune: rot0.1/zoom0.05/contrast0.1/brightness0.05; both: hue0.05, sat0.7-1.3)",
+  "base_layer_name": "efficientnetb0",
+  "backbone_total_layers": 238,
+  "duration_s_frozen": 1638.7,
+  "epochs_frozen": 100,
+  "best_val_accuracy_frozen": 1.0,
+  "unfreeze_policy": "last 60 of 238 (~25%), BN frozen",
+  "unfrozen_layer_count": 47,
+  "duration_s_finetune": 253.6,
+  "epochs_finetune": 80,
+  "best_val_accuracy_finetune": 1.0
+}

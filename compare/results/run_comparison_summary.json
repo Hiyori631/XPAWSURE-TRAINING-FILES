@@ -1,0 +1,13 @@
+{
+  "elapsed_s": 37762.1,
+  "backbones": [
+    "mobilenet",
+    "resnet50",
+    "densenet"
+  ],
+  "seeds": [
+    42,
+    7,
+    123
+  ]
+}

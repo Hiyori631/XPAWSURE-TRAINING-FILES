@@ -1,0 +1,11 @@
+                     precision    recall  f1-score   support
+
+Allergic Dermatitis       0.92      0.92      0.92        13
+          Bacterial       0.96      0.85      0.90        27
+             Fungal       0.90      0.93      0.92        30
+            Hotspot       0.80      0.95      0.87        21
+              Mange       1.00      0.96      0.98        52
+
+           accuracy                           0.93       143
+          macro avg       0.92      0.92      0.92       143
+       weighted avg       0.94      0.93      0.93       143

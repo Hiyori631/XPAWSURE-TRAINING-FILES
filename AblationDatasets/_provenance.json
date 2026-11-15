@@ -1,0 +1,36 @@
+{
+  "sources": {
+    "ProcessedDataset224_Local": "local",
+    "ProcessedDataset224": "public/international"
+  },
+  "source_files": 469,
+  "md5_dupes_removed": 36,
+  "near_dupes_removed": 12,
+  "unique_photos": 421,
+  "holdout_fraction": 0.15,
+  "seed": 42,
+  "holdout": 64,
+  "arms": {
+    "Local": {
+      "train": 95,
+      "valid": 16,
+      "test": 24,
+      "test_local": 24,
+      "test_public": 0
+    },
+    "Public": {
+      "train": 209,
+      "valid": 37,
+      "test": 40,
+      "test_local": 0,
+      "test_public": 40
+    },
+    "Combined": {
+      "train": 303,
+      "valid": 54,
+      "test": 64,
+      "test_local": 24,
+      "test_public": 40
+    }
+  }
+}

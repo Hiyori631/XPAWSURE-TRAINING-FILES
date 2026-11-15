@@ -1,0 +1,80 @@
+{
+  "backbone": "effnet",
+  "label": "EfficientNetB0",
+  "seed": 7,
+  "stage": "finetune",
+  "dataset": "AblationDatasets/Local",
+  "class_names": [
+    "Bacterial",
+    "Fungal",
+    "Hotspot",
+    "Mange"
+  ],
+  "test_accuracy": 1.0,
+  "macro_precision": 1.0,
+  "macro_recall": 1.0,
+  "macro_f1": 1.0,
+  "weighted_precision": 1.0,
+  "weighted_recall": 1.0,
+  "weighted_f1": 1.0,
+  "per_class": {
+    "Bacterial": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 5
+    },
+    "Fungal": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 8
+    },
+    "Hotspot": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2
+    },
+    "Mange": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 9
+    }
+  },
+  "confusion_matrix": [
+    [
+      5,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      8,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      9
+    ]
+  ],
+  "params_total": 4417575,
+  "model_size_bytes": 42679541,
+  "duration_s_frozen": 163.2,
+  "duration_s_finetune": 1570.1,
+  "inference_ms_mean": 561.289,
+  "inference_ms_std": 68.675,
+  "unfreeze_policy": "last 60 of 238 (~25%), BN frozen",
+  "checkpoint": "compare\\ckpt\\local_effnet_s7_best.keras"
+}

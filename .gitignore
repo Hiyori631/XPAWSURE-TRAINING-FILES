@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Virtual environment (recreate with: python -m venv venv + pip install ...)
+venv/
+.venv/
+env/
+
+# Model checkpoints — too large for GitHub (single files up to 219 MB)
+# Back these up separately (OneDrive / Google Drive / external disk)
+models/
+compare/ckpt/
+*.keras
+*.h5
+*.onnx
+*.tflite
+*.pb
+
+# TensorFlow / Keras temp
+*.ckpt
+events.out.tfevents.*
+
+# OS noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/

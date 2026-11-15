@@ -1,0 +1,10 @@
+              precision    recall  f1-score   support
+
+   Bacterial       0.83      1.00      0.91         5
+      Fungal       1.00      1.00      1.00         8
+     Hotspot       1.00      1.00      1.00         2
+       Mange       1.00      0.89      0.94         9
+
+    accuracy                           0.96        24
+   macro avg       0.96      0.97      0.96        24
+weighted avg       0.97      0.96      0.96        24

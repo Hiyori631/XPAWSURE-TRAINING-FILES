@@ -1,0 +1,34 @@
+{
+  "backbone": "resnet50",
+  "label": "ResNet50",
+  "seed": 7,
+  "dataset": "ProcessedDataset224_Clean_5class",
+  "image_size": 224,
+  "batch_size": 16,
+  "class_names": [
+    "Allergic Dermatitis",
+    "Bacterial",
+    "Fungal",
+    "Hotspot",
+    "Mange"
+  ],
+  "class_weights": {
+    "0": 3.0,
+    "1": 2.0,
+    "2": 2.5,
+    "3": 1.0,
+    "4": 1.3
+  },
+  "loss": "focal_loss gamma=2.0 with class alpha",
+  "augmentation": "production recipe (frozen: rot0.15/zoom0.1/contrast0.15/brightness0.1/translate0.05; finetune: rot0.1/zoom0.05/contrast0.1/brightness0.05; both: hue0.05, sat0.7-1.3)",
+  "base_layer_name": "resnet50",
+  "backbone_total_layers": 175,
+  "duration_s_frozen": 1264.9,
+  "epochs_frozen": 100,
+  "best_val_accuracy_frozen": 0.9264705777168274,
+  "unfreeze_policy": "last 44 of 175 (~25%), BN frozen",
+  "unfrozen_layer_count": 31,
+  "duration_s_finetune": 3310.0,
+  "epochs_finetune": 80,
+  "best_val_accuracy_finetune": 0.9264705777168274
+}

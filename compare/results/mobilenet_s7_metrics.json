@@ -1,0 +1,100 @@
+{
+  "backbone": "mobilenet",
+  "label": "MobileNetV2",
+  "seed": 7,
+  "stage": "finetune",
+  "dataset": "ProcessedDataset224_Clean_5class",
+  "class_names": [
+    "Allergic Dermatitis",
+    "Bacterial",
+    "Fungal",
+    "Hotspot",
+    "Mange"
+  ],
+  "test_accuracy": 0.8811,
+  "macro_precision": 0.8395,
+  "macro_recall": 0.8572,
+  "macro_f1": 0.8473,
+  "weighted_precision": 0.8883,
+  "weighted_recall": 0.8811,
+  "weighted_f1": 0.8838,
+  "per_class": {
+    "Allergic Dermatitis": {
+      "precision": 0.6,
+      "recall": 0.6923,
+      "f1": 0.6429,
+      "support": 13
+    },
+    "Bacterial": {
+      "precision": 0.8214,
+      "recall": 0.8519,
+      "f1": 0.8364,
+      "support": 27
+    },
+    "Fungal": {
+      "precision": 0.9333,
+      "recall": 0.9333,
+      "f1": 0.9333,
+      "support": 30
+    },
+    "Hotspot": {
+      "precision": 0.8636,
+      "recall": 0.9048,
+      "f1": 0.8837,
+      "support": 21
+    },
+    "Mange": {
+      "precision": 0.9792,
+      "recall": 0.9038,
+      "f1": 0.94,
+      "support": 52
+    }
+  },
+  "confusion_matrix": [
+    [
+      9,
+      3,
+      0,
+      1,
+      0
+    ],
+    [
+      3,
+      23,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      28,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      19,
+      0
+    ],
+    [
+      2,
+      1,
+      2,
+      0,
+      47
+    ]
+  ],
+  "params_total": 2626117,
+  "model_size_bytes": 27362219,
+  "duration_s_frozen": 1404.6,
+  "duration_s_finetune": 1307.9,
+  "inference_ms_mean": 55.01,
+  "inference_ms_std": 6.41,
+  "unfreeze_policy": "last 38 of 154 (~25%), BN frozen",
+  "checkpoint": "compare\\ckpt\\mobilenet_s7_best.keras",
+  "inference_ms_p50": 54.07,
+  "inference_protocol": "CPU, batch=1, 50 images, 5 warmup runs excluded"
+}
